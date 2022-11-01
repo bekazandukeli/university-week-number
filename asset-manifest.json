@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/university-week-number/static/css/main.619f6b47.css",
+    "main.js": "/university-week-number/static/js/main.bd3f96dd.js",
+    "index.html": "/university-week-number/index.html",
+    "main.619f6b47.css.map": "/university-week-number/static/css/main.619f6b47.css.map",
+    "main.bd3f96dd.js.map": "/university-week-number/static/js/main.bd3f96dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.619f6b47.css",
+    "static/js/main.bd3f96dd.js"
+  ]
+}
