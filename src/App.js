@@ -1,6 +1,8 @@
 /* eslint-disable no-extend-native */
 import { useEffect, useState } from 'react';
 import './App.css';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 // Returns the ISO week of the date.
 Date.prototype.getWeek = function () {
@@ -42,7 +44,7 @@ function App() {
   }, [firstStudyWeek]);
 
   const handleFirstWeekSubmit = (e) => {
-    setFirstStudyWeek(weekInput);
+    setFirstStudyWeek(Number(weekInput));
     setTapCount(0);
   };
 
@@ -51,13 +53,21 @@ function App() {
   if (firstStudyWeek === null || tapCount === 10) {
     return (
       <div className="App">
-        <h1>Semester started in week:</h1>
-        <input
-          onChange={(e) => setWeekInput(e.target.valueAsNumber)}
+        <TextField
+          onChange={(e) => setWeekInput(e.target.value)}
           value={weekInput}
           type="number"
+          label="First Week Number"
+          variant="outlined"
         />
-        <button onClick={handleFirstWeekSubmit}>Submit</button>
+
+        <Button
+          onClick={handleFirstWeekSubmit}
+          style={{ marginTop: 25 }}
+          variant="contained"
+        >
+          Submit
+        </Button>
       </div>
     );
   }
